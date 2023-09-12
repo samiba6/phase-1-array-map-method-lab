@@ -12,5 +12,8 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return  tutorials.map((tuto)=> tuto.split(" ").map(word => word.replace(/^./, word[0].toUpperCase())).join(" "))
+
+ }
+
+console.log(titleCased(tutorials))
